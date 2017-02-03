@@ -6,6 +6,8 @@ module UsersHelper
     size = options[:size]
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
     image_tag(gravatar_url, alt: user.name, class: "gravatar")
+    # trying to get mouseover image path to work...it's relative to what?
+    #image_tag(gravatar_url, alt: user.name, class: "gravatar", onMouseover: "this.src='/assets/images/bizarro2.jpg'", onMouseout: "this.src='#{gravatar_url}'")
   end
 
 end
